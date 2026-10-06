@@ -69,14 +69,29 @@ const Contact = () => {
       {alert.show && <Alert {...alert} />}
 
       <div className="relative min-h-screen flex items-center justify-center flex-col">
-        <img src="/assets/terminal.png" alt="terminal-bg" className="absolute inset-0 min-h-screen" />
+        <picture className="absolute inset-0 min-h-screen w-full h-full">
+          <source srcSet="/assets/terminal.webp" type="image/webp" />
+          <img src="/assets/terminal.png" alt="terminal-bg" className="w-full h-full object-cover" />
+        </picture>
 
         <div className="contact-container">
-          <h3 className="head-text">Let's talk</h3>
+          <h3 className="head-text">Let's connect</h3>
           <p className="text-lg text-white-600 mt-3">
-            Whether you’re looking to build a new website, improve your existing platform, or bring a unique project to
-            life, I’m here to help.
+            Currently based in <span className="text-emerald-400 font-medium">Dubai, UAE</span> and available for <span className="text-white font-medium">immediate full-time employment</span>.
+            Whether you are looking to build a high-performance web or mobile platform, integrate AI features, or scale your engineering team, feel free to reach out.
           </p>
+
+          <div className="flex flex-wrap gap-3 mt-4 text-sm text-neutral-300">
+            <a href="mailto:afiafsal6023@gmail.com" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black-300 border border-black-200 hover:text-white hover:border-emerald-500/50 transition-colors">
+              ✉️ afiafsal6023@gmail.com
+            </a>
+            <a href="tel:+971541424689" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black-300 border border-black-200 hover:text-white hover:border-emerald-500/50 transition-colors">
+              📞 +971 54 142 4689
+            </a>
+            <a href="https://www.linkedin.com/in/mohamed-afsal-p/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black-300 border border-black-200 hover:text-white hover:border-emerald-500/50 transition-colors">
+              🔗 LinkedIn
+            </a>
+          </div>
 
           <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
             <label className="space-y-3">

@@ -81,14 +81,34 @@ const Projects = () => {
             )}
           </div>
 
-          <div className="flex justify-between items-center mt-7">
-            <button className="arrow-btn" onClick={() => handleNavigation('previous')}>
-              <img src="/assets/left-arrow.png" alt="left arrow" />
-            </button>
+          <div className="flex justify-between items-center mt-7 pt-4 border-t border-black-300">
+            <div className="flex items-center gap-2">
+              {myProjects.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setSelectedProjectIndex(idx)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    idx === selectedProjectIndex
+                      ? 'bg-emerald-400 w-7'
+                      : 'bg-white/20 hover:bg-white/40'
+                  }`}
+                  aria-label={`Go to project ${idx + 1}`}
+                />
+              ))}
+              <span className="text-xs font-mono text-neutral-400 ml-2">
+                0{selectedProjectIndex + 1} / 0{projectCount}
+              </span>
+            </div>
 
-            <button className="arrow-btn" onClick={() => handleNavigation('next')}>
-              <img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
-            </button>
+            <div className="flex items-center gap-3">
+              <button className="arrow-btn" onClick={() => handleNavigation('previous')} aria-label="Previous project">
+                <img src="/assets/left-arrow.png" alt="left arrow" />
+              </button>
+
+              <button className="arrow-btn" onClick={() => handleNavigation('next')} aria-label="Next project">
+                <img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
+              </button>
+            </div>
           </div>
         </div>
 

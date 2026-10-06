@@ -24,15 +24,25 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
+      <div className="w-full mx-auto flex flex-col sm:mt-32 mt-20 c-space gap-3 relative z-10">
+        <div className="flex justify-center items-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs sm:text-sm font-medium tracking-wide">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Based in Dubai, UAE · Available for Immediate Full-Time Role
+          </div>
+        </div>
+
         <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
           Hi, I am Mohamed Afsal <span className="waving-hand">👋</span>
         </p>
         <p className="hero_tag text-gray_gradient">Full Stack Developer</p>
+        <p className="text-center text-neutral-400 sm:text-base text-xs font-generalsans -mt-2 tracking-widest uppercase">
+          React &bull; Next.js &bull; TypeScript &bull; Node.js &bull; MERN Stack
+        </p>
       </div>
 
       <div className="w-full h-full absolute inset-0">
-        <Canvas className="w-full h-full">
+        <Canvas className="w-full h-full" gl={{ powerPreference: 'high-performance', antialias: true }}>
           <Suspense fallback={<CanvasLoader />}>
             {/* To hide controller */}
             <Leva hidden />

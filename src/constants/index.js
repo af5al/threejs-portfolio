@@ -58,11 +58,11 @@ export const clientReviews = [
 
 export const myProjects = [
   {
-    title: 'EVENTSPHERE (Social Media with job recruitment platform for Event managment companies)',
-    desc: 'Designed and developed a MERN stack platform connecting users with event management companies.',
+    title: 'EventSphere - Social & Job Recruitment Platform',
+    desc: 'Full-stack MERN platform connecting users with event management companies, featuring job recruitment and real-time communication.',
     subdesc:
-      'Key features include event promotion, job recruitment, real-time chat and video calls (Socket.io, Zegocloud), secure JWT authentication, and role-based authorization. Integrated media uploads (Multer, React Cropper), PayPal transactions, and automated plan expirations. Deployed on AWS with Docker, using NGINX and Netlify for a seamless experience.',
-    gitHref: 'https://github.com/Afi-THEdeveloper/EventSphere-social-media',
+      'Engineered JWT role-based auth, real-time chat and video calls (Socket.io, ZegoCloud), file uploads (Multer), PayPal transactions, and automated plan expirations. Containerized with Docker and deployed on AWS EC2 with NGINX for high reliability.',
+    gitHref: 'https://github.com/af5al/EventSphere',
     texture: '/textures/project/project1.mp4',
     logo: '/assets/project-logo1.png',
     logoStyle: {
@@ -80,7 +80,7 @@ export const myProjects = [
       {
         id: 2,
         name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        path: '/assets/tailwindcss.png',
       },
       {
         id: 3,
@@ -93,18 +93,119 @@ export const myProjects = [
         path: '/assets/express-icon.png',
       },
       {
-        id: 4,
+        id: 5,
         name: 'Mongo db',
         path: '/assets/mongo-icon.png',
+      },
+      {
+        id: 6,
+        name: 'Docker',
+        path: '/assets/docker.svg',
+      },
+      {
+        id: 7,
+        name: 'AWS',
+        path: '/assets/aws.svg',
       },
     ],
   },
   {
-    title: 'ELEGANT SEATS -ECommerce web app application',
-    desc: 'A Shopping website that prioritizes a smooth and delightful experience for users to purchase furnitures,especially chairs. Built on the MVC Pattern for efficient code organization, the platform ensures streamlined project structure.',
+    title: 'Smart POS - Offline-First Point of Sale App',
+    desc: 'Architected an offline-first POS and inventory mobile application in Flutter and Dart with SQLite for reliable financial operations.',
     subdesc:
-      'Implemented RESTful APIs for seamless frontend-backend communication, secure authentication using Cookies and Sessions, and robust password encryption with Bcrypt and Crypto. Designed a dynamic shopping cart with coupon support, optimized search and filter features, and integrated Razorpay for secure payments. Deployed on Render for high availability and performance.',
-    gitHref: 'https://github.com/Afi-THEdeveloper/Elegant-seats',
+      'Used integer-cents arithmetic to avoid floating-point errors, integrated Bluetooth ESC/POS receipt printing, bulk Excel import with validation, comprehensive PDF reports, and JSON backup/restore.',
+    gitHref: 'https://github.com/af5al/smart-pos-app',
+    texture: '/textures/project/project3.mp4',
+    logo: '/assets/project-logo3.png',
+    logoStyle: {
+      backgroundColor: '#0E1F38',
+      border: '0.2px solid #142E54',
+      boxShadow: '0px 0px 60px 0px #1E4E8C4D',
+    },
+    spotlight: '/assets/spotlight3.png',
+    tags: [
+      {
+        id: 1,
+        name: 'Flutter',
+        path: '/assets/flutter.svg',
+      },
+      {
+        id: 2,
+        name: 'Dart',
+        path: '/assets/dart.svg',
+      },
+      {
+        id: 3,
+        name: 'SQLite',
+        path: '/assets/sqlite.svg',
+      },
+    ],
+  },
+  {
+    title: 'Local AI Assistant - Private LLM Chat (In Progress)',
+    desc: 'A private, offline AI assistant that runs open-source LLMs locally with Ollama, featuring streaming responses and zero data leakage.',
+    subdesc:
+      'Built with a high-performance Python / FastAPI backend paired with a modern React chat interface. Supports local model switching, markdown/code rendering, conversation memory, and complete local data privacy.',
+    gitHref: 'https://github.com/af5al/local-ai-assistant',
+    texture: '/textures/project/project4.mp4',
+    logo: '/assets/project-logo4.png',
+    logoStyle: {
+      backgroundColor: '#1C1A35',
+      border: '0.2px solid #2B2556',
+      boxShadow: '0px 0px 60px 0px #6343994D',
+    },
+    spotlight: '/assets/spotlight4.png',
+    tags: [
+      {
+        id: 1,
+        name: 'Python',
+        path: '/assets/python.svg',
+      },
+      {
+        id: 2,
+        name: 'FastAPI',
+        path: '/assets/fastapi.svg',
+      },
+      {
+        id: 3,
+        name: 'React.js',
+        path: '/assets/react.svg',
+      },
+    ],
+  },
+  {
+    title: 'Movie Recommender System - Machine Learning',
+    desc: 'Content-based movie recommendation engine built over ~5,000 IMDb titles that suggests the top 5 most similar movies for any query.',
+    subdesc:
+      'Engineered NLP bag-of-words tag vectors and computed cosine similarity matrices using scikit-learn and Pandas. Packaged and deployed via an interactive Streamlit application.',
+    gitHref: 'https://github.com/af5al/movie-recommendor-system',
+    texture: '/textures/project/project5.mp4',
+    logo: '/assets/project-logo5.png',
+    logoStyle: {
+      backgroundColor: '#20161E',
+      border: '0.2px solid #351C2C',
+      boxShadow: '0px 0px 60px 0px #85225E4D',
+    },
+    spotlight: '/assets/spotlight5.png',
+    tags: [
+      {
+        id: 1,
+        name: 'Python',
+        path: '/assets/python.svg',
+      },
+      {
+        id: 2,
+        name: 'Streamlit',
+        path: '/assets/streamlit.svg',
+      },
+    ],
+  },
+  {
+    title: 'Elegant Seats - E-Commerce Web Application',
+    desc: 'A full-featured furniture and seating shopping platform built on the MVC pattern with robust RESTful APIs and secure payment integrations.',
+    subdesc:
+      'Implemented session-based authentication, password encryption (Bcrypt), dynamic shopping cart with coupon support, optimized search and filter features, and Razorpay gateway. Deployed on Render.',
+    gitHref: 'https://github.com/af5al/Elegant-seats',
     liveHref: 'https://elegantseats-shop.onrender.com/',
     texture: '/textures/project/project2.mp4',
     logo: '/assets/project-logo2.png',
@@ -123,10 +224,10 @@ export const myProjects = [
       {
         id: 2,
         name: 'Bootstrap',
-        path: 'assets/bootstrap-icon.png',
+        path: '/assets/bootstrap-icon.png',
       },
       {
-        id: 4,
+        id: 3,
         name: 'Express js',
         path: '/assets/express-icon.png',
       },
@@ -153,21 +254,32 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 export const workExperiences = [
   {
     id: 1,
-    name: 'Codinoz Technologies LLP',
-    pos: 'Full Stack Developer',
-    duration: '2025 - Present',
+    name: 'Codinoz Technologies (Product Company)',
+    pos: 'Senior Product Engineer | Promoted from Full Stack Developer',
+    duration: 'April 2024 - Present',
     title:
-      'I am currently working as a Full Stack Developer at a software development company, where our team is focused on building innovative products. Through my experience, I have gained expertise in collaborative development using Git and GitHub, as well as working with Sequelize, PostgreSQL, and React Native. I have contributed to projects such as an ERP system for business solutions (including accounting), a restaurant management software, and an HRM employee management system.',
+      'Promoted to Senior Product Engineer, driving architecture and performance across the ERP, HRM, and multi-tenant platforms. Optimized application performance and reduced load times across data-heavy tables. Integrated AI capabilities via a dedicated Python server to accelerate high-volume data processing. Built shared REST APIs consumed across multiple business apps, implemented JWT/RBAC role-based security, Redux/MobX state management, and expanded web platforms to mobile using React Native.',
     icon: '/assets/codinoz-logo.png',
     animation: 'victory',
   },
   {
     id: 2,
     name: 'Brototype',
-    pos: 'Software development Internship',
-    duration: '2023 - 2024',
-    title: 'I have continuously reinvented myself through hard work and perseverance, embracing challenges with a problem-solving mindset. Learning and understanding data structures have strengthened my ability to tackle complex problems, while weekly interviews and studies have honed my time management skills. Additionally, daily communication sessions have significantly improved my fluency in English.',
+    pos: 'Full Stack Developer (Internship)',
+    duration: 'January 2023 - April 2024',
+    title:
+      'Engineered two end-to-end MERN stack production applications: a social recruitment platform and an e-commerce platform with PayPal and Razorpay payment gateways. Built RESTful APIs, JWT authentication, and real-time Socket.io features; containerized with Docker and deployed on AWS EC2 with NGINX. Mastered Data Structures & Algorithms, Clean Architecture, and Agile engineering workflows.',
     icon: '/assets/broto-logo.png',
     animation: 'clapping',
+  },
+  {
+    id: 3,
+    name: 'Web Development Mentorship',
+    pos: 'Technical Mentor & Code Reviewer',
+    duration: '2024 - Present',
+    title:
+      'Mentored students and aspiring professionals in full-stack web development (React, Next.js, Node.js, modern databases) and Data Structures & Algorithms (DSA), conducting technical code reviews and architectural guidance.',
+    icon: '/assets/react.svg',
+    animation: 'salute',
   },
 ];

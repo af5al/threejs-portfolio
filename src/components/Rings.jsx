@@ -11,7 +11,7 @@ const Rings = ({ position }) => {
     }
   }, []);
 
-  const texture = useTexture('textures/rings.png');
+  const texture = useTexture('/textures/rings.webp');
 
   useGSAP(
     () => {
@@ -56,5 +56,7 @@ const Rings = ({ position }) => {
     </Center>
   );
 };
+
+useTexture.preload('/textures/rings.webp');
 
 export default Rings;
