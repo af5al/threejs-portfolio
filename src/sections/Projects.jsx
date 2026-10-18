@@ -30,10 +30,13 @@ const Projects = () => {
   const currentProject = myProjects[selectedProjectIndex];
 
   return (
-    <section className="c-space my-20">
-      <p className="head-text">My Selected Work</p>
+    <section className="c-space my-20" id="projects">
+      <div className="flex flex-col gap-2 mb-4">
+        <p className="text-emerald-400 font-mono text-sm uppercase tracking-widest">Featured Work & Case Studies</p>
+        <p className="head-text">Selected Engineering Projects</p>
+      </div>
 
-      <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
+      <div className="grid lg:grid-cols-2 grid-cols-1 mt-8 gap-5 w-full">
         <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
           <div className="absolute top-0 right-0">
             <img src={currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover rounded-xl" />
@@ -46,14 +49,14 @@ const Projects = () => {
           <div className="flex flex-col gap-5 text-white-600 my-5">
             <p className="text-white text-2xl font-semibold animatedText ">{currentProject.title}</p>
 
-            <p className="animatedText">{currentProject.desc}</p>
-            <p className="animatedText">{currentProject.subdesc}</p>
+            <p className="animatedText leading-relaxed">{currentProject.desc}</p>
+            <p className="animatedText leading-relaxed text-sm text-neutral-400">{currentProject.subdesc}</p>
           </div>
 
           <div className="flex items-center justify-between flex-wrap gap-5">
             <div className="flex items-center gap-3">
               {currentProject.tags.map((tag, index) => (
-                <div key={index} className="tech-logo">
+                <div key={index} className="tech-logo" title={tag.name}>
                   <img src={tag.path} alt={tag.name} />
                 </div>
               ))}

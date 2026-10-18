@@ -75,26 +75,48 @@ const Contact = () => {
         </picture>
 
         <div className="contact-container">
-          <h3 className="head-text">Let's connect</h3>
-          <p className="text-lg text-white-600 mt-3">
-            Currently based in <span className="text-emerald-400 font-medium">Dubai, UAE</span> and available for <span className="text-white font-medium">immediate full-time employment</span>.
-            Whether you are looking to build a high-performance web or mobile platform, integrate AI features, or scale your engineering team, feel free to reach out.
+          <h3 className="head-text text-2xl sm:text-3xl">Let's connect</h3>
+          <p className="text-sm sm:text-base text-white-600 mt-2 leading-relaxed">
+            Based in <span className="text-emerald-400 font-medium">Dubai, UAE</span> · Available for <span className="text-white font-medium">immediate full-time roles</span>.
+            Looking to build scalable web/mobile apps or integrate AI features? Let's discuss.
           </p>
 
-          <div className="flex flex-wrap gap-3 mt-4 text-sm text-neutral-300">
-            <a href="mailto:afiafsal6023@gmail.com" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black-300 border border-black-200 hover:text-white hover:border-emerald-500/50 transition-colors">
+          <div className="flex flex-wrap gap-2 mt-3 text-xs text-neutral-300">
+            <a
+              href="mailto:afiafsal6023@gmail.com"
+              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-black-300/80 border border-white/10 hover:text-emerald-400 transition-colors">
               ✉️ afiafsal6023@gmail.com
             </a>
-            <a href="tel:+971541424689" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black-300 border border-black-200 hover:text-white hover:border-emerald-500/50 transition-colors">
+            <a
+              href="tel:+971541424689"
+              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-black-300/80 border border-white/10 hover:text-emerald-400 transition-colors">
               📞 +971 54 142 4689
             </a>
-            <a href="https://www.linkedin.com/in/mohamed-afsal-p/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-black-300 border border-black-200 hover:text-white hover:border-emerald-500/50 transition-colors">
+            <a
+              href="https://wa.me/971541424689"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-black-300/80 border border-white/10 hover:text-emerald-400 text-emerald-400 transition-colors">
+              💬 WhatsApp
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mohamed-afsal-p/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-black-300/80 border border-white/10 hover:text-white transition-colors">
               🔗 LinkedIn
+            </a>
+            <a
+              href="https://github.com/af5al"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-black-300/80 border border-white/10 hover:text-white transition-colors">
+              🐙 GitHub
             </a>
           </div>
 
-          <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
-            <label className="space-y-3">
+          <form ref={formRef} onSubmit={handleSubmit} className="mt-5 sm:mt-6 flex flex-col space-y-3 sm:space-y-4">
+            <label className="space-y-1">
               <span className="field-label">Full Name</span>
               <input
                 type="text"
@@ -107,7 +129,7 @@ const Contact = () => {
               />
             </label>
 
-            <label className="space-y-3">
+            <label className="space-y-1">
               <span className="field-label">Email address</span>
               <input
                 type="email"
@@ -120,20 +142,20 @@ const Contact = () => {
               />
             </label>
 
-            <label className="space-y-3">
+            <label className="space-y-1">
               <span className="field-label">Your message</span>
               <textarea
                 name="message"
                 value={form.message}
                 onChange={handleChange}
                 required
-                rows={5}
-                className="field-input"
-                placeholder="Share your thoughts or inquiries..."
+                rows={3}
+                className="field-input resize-none py-2"
+                placeholder="Share your project requirements or inquiries..."
               />
             </label>
 
-            <button className="field-btn" type="submit" disabled={loading}>
+            <button className="field-btn mt-1" type="submit" disabled={loading}>
               {loading ? 'Sending...' : 'Send Message'}
 
               <img src="/assets/arrow-up.png" alt="arrow-up" className="field-btn_arrow" />

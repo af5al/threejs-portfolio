@@ -24,21 +24,37 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">
-      <div className="w-full mx-auto flex flex-col sm:mt-32 mt-20 c-space gap-3 relative z-10">
-        <div className="flex justify-center items-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs sm:text-sm font-medium tracking-wide">
+      <div className="w-full mx-auto flex flex-col sm:mt-28 mt-20 c-space gap-3 relative z-10 pointer-events-none">
+        <div className="flex justify-center items-center pointer-events-auto">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs sm:text-sm font-medium tracking-wide backdrop-blur-md shadow-lg">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             Based in Dubai, UAE · Available for Immediate Full-Time Role
           </div>
         </div>
 
-        <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
+        <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans drop-shadow-md">
           Hi, I am Mohamed Afsal <span className="waving-hand">👋</span>
         </p>
-        <p className="hero_tag text-gray_gradient">Full Stack Developer</p>
-        <p className="text-center text-neutral-400 sm:text-base text-xs font-generalsans -mt-2 tracking-widest uppercase">
-          React &bull; Next.js &bull; TypeScript &bull; Node.js &bull; MERN Stack
+        <h1 className="hero_tag text-gray_gradient drop-shadow-lg">AI & Full-Stack Developer</h1>
+        <p className="text-center text-emerald-400 sm:text-base text-xs font-generalsans -mt-2 tracking-wider font-medium drop-shadow-sm">
+          Python &bull; Generative AI Integration &bull; MERN Stack Developer
         </p>
+
+        {/* Quick HR Highlights */}
+        <div className="pointer-events-auto flex flex-wrap justify-center items-center gap-2 sm:gap-2.5 max-w-3xl mx-auto mt-2 p-2 sm:p-2.5 rounded-2xl bg-black/60 backdrop-blur-md border border-white/10 shadow-2xl">
+          <span className="px-3 py-1.5 rounded-lg bg-black-200/90 border border-white/10 text-neutral-200 text-xs sm:text-sm font-mono flex items-center gap-1.5 shadow-sm">
+            <span className="text-amber-400">⚡</span> 3 Years Production Exp
+          </span>
+          <span className="px-3 py-1.5 rounded-lg bg-black-200/90 border border-white/10 text-neutral-200 text-xs sm:text-sm font-mono flex items-center gap-1.5 shadow-sm">
+            <span className="text-emerald-400">🤖</span> Generative AI & Ollama
+          </span>
+          <span className="px-3 py-1.5 rounded-lg bg-black-200/90 border border-white/10 text-neutral-200 text-xs sm:text-sm font-mono flex items-center gap-1.5 shadow-sm">
+            <span className="text-cyan-400">🏢</span> Enterprise ERP Platforms
+          </span>
+          <span className="px-3 py-1.5 rounded-lg bg-black-200/90 border border-white/10 text-neutral-200 text-xs sm:text-sm font-mono flex items-center gap-1.5 shadow-sm">
+            <span className="text-purple-400">📱</span> Web & Mobile (React Native / Flutter)
+          </span>
+        </div>
       </div>
 
       <div className="w-full h-full absolute inset-0">
@@ -66,9 +82,16 @@ const Hero = () => {
       </div>
 
       <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
-        <a href="#about" className="w-fit">
-          <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
-        </a>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#contact" className="w-full sm:w-auto">
+            <Button name="Let's work together" isBeam containerClass="w-full sm:w-auto px-8 py-3.5" />
+          </a>
+          <a
+            href="#projects"
+            className="w-full sm:w-auto text-center px-6 py-3 rounded-md border border-white/15 bg-black/60 hover:bg-white/10 hover:border-emerald-400/50 text-white text-sm font-medium transition-all backdrop-blur-md">
+            Explore Selected Work ↓
+          </a>
+        </div>
       </div>
     </section>
   );
